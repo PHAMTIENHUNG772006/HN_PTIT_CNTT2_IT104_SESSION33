@@ -32,7 +32,7 @@ export default function ListProduct() {
               </div>
 
               <div>
-                <div  className='quantity'>{element.quantity === 0 ? "" : element.quantity}</div>
+                {element.quantity !== 0 ? <div  className='quantity'>{element.quantity}</div> : ""}
                 <button onClick={() => {handleAdd(element)}} className='price'>{element.price}</button>
               </div>
             </div>

@@ -13,16 +13,20 @@ export const CartReducer = (state = initCart, action: Action) => {
       const product = action.payload;
 
       const findItem = state.find((item) => item.id === product.id);
+  
+      if (!findItem || findItem.quantity === 0) {
+        return state;
+      }
+      
 
       if (findItem) {
         return state.map((item) =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity - 1 }
             : item
         );
       }
 
-      // nếu chưa có -> thêm mới
       return [...state, { ...product, quantity: 1 }];
     }
 
