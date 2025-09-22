@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  gap: 24px;
+}
+header {
+  padding: 22px;
+  font-size: 22px;
+  background-color:#337AB7;
+  color: #fff;
+
+}
+.left-container{
+width: 100%;
+text-align: center;
+}
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.nameProduct{
+  font-size: 22px;
+}
+.image{
+  width:200px;
+  height: 150px;
+}
+.quantity {
+  margin-bottom: 12px;
+  padding: 12px;
+  background-color: #FF6633;
+  color: #fff;
+  border-radius: 7px;
+  width: 50px;
+  height: 10px;
+  text-align: center;
+}
+.price {
+  padding: 7px 0;
+  background-color: #CACACA;
+  color: #fff;
+  border-radius: 7px;
+  width: 70px;
+  border: none;
+}
